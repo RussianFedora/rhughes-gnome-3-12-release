@@ -44,5 +44,8 @@ install -d -m755 \
 
 
 %changelog
+* Thu Apr  3 2014 Arkady L. Shane <ashejn@rhughes.ru> - 20-2.R
+- build both arch
+
 * Thu Apr  3 2014 Arkady L. Shane <ashejn@rhughes.ru> - 20-1.R
 - initial build
