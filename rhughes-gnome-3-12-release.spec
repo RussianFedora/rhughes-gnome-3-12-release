@@ -2,7 +2,7 @@
 
 Name:           rhughes-%{repo}-release
 Version:        20
-Release:        1.R
+Release:        2.R
 Summary:        Rhuges Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -10,8 +10,6 @@ License:        BSD
 URL:            http://copr.fedoraproject.org/coprs/rhughes/
 Source0:	rhughes-%{repo}-x86_64.repo
 Source1:        rhughes-%{repo}-i386.repo
-
-Buildarch:	noarch
 
 Requires:       system-release >= %{version}
 
@@ -32,7 +30,7 @@ install -d -m755 \
   $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 # Yum .repo files
-%if %(uname -m) == "x86_64"
+%ifarch x86_64
 %{__install} -p -m644 %{SOURCE0} \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/rhughes-%{repo}.repo
 %else
